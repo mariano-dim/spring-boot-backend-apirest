@@ -1,4 +1,4 @@
-package com.bolsadeideas.springboot.backend.apirest.models.entity;
+package com.ffx11.springboot.backend.apirest.models.entity;
 
 import java.io.Serializable;
 import java.util.Date;
