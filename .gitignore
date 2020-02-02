@@ -1,0 +1,13 @@
+# Ignores
+\.DS_Store
+\.classpath
+\.project
+\.settings
+target/
+.idea
+\.metadata/
+Servers/
+target/
+*.class
+*.eml
+*.log
