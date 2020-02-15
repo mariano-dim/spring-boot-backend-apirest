@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="clientes")
@@ -13,14 +16,21 @@ public class Cliente implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 
+	@NotEmpty
+	@Size(min=4, max=12)
 	@Column(nullable = false)
 	private String nombre;
+
+	@NotEmpty
 	private String apellido;
+
+	@NotEmpty
+	@Email
 	@Column(nullable = false, unique = true)
 	private String email;
-	
-	@Column(name="create_at")
+
 	@Temporal(TemporalType.DATE)
+	@Column(name="create_at")
 	private Date createAt;
 
 	@PrePersist
